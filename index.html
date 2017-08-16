@@ -29,8 +29,8 @@
             <img src="Img/responsive-logo.svg" alt="Responsive Design Logo">
           </div>
           <div class="logo-name">
-            <h1>Francisco <span class="logo-lastname">Osegueda</span></h1>
-            <h2>Front End Web Developer</h2>
+            <h2>Francisco <span class="logo-lastname">Osegueda</span></h2>
+            <h3>Front End Web Developer</h3>
           </div>
         </a>
         <div class="container collapse navbar-collapse" id="navbarNav">
@@ -46,7 +46,7 @@
   <!-- /Navigation Bar -->
 
   <!-- Main -->
-    <div class="text-center main-primary">
+  <div class="text-center main-primary">
     <div class="container">
       <h1 class="my-3">Front End Web Developer</h1>
       <p class="main-p">Building user-friendly websites with high attention to detail and quality responsive design.</p>
@@ -105,7 +105,38 @@
   <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-  <script src="js/lightbox.js" type="text/javascript" charset="utf-8"></script>
-  <script src="js/smoothscroll.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript">
+    var $overlay = $('<div id=overlay></div>');
+    var $image = $('<img>');
+    var $caption = $('<p>Visit my <a href="https://github.com/franjose84" target="_blank">GitHub page</a> to learn more.</p>');
+  //Add image and captions to overlay
+    $overlay.append($image);
+    $overlay.append($caption);
+  //Add overlay
+    $('body').append($overlay);
+  //Capture the click event on a link to an image
+    $('#portfolio a').click(function(event){
+      event.preventDefault();
+      var imageLocation = $(this).attr('href');
+      $image.attr('src', imageLocation);
+      //Show the overlay
+      $overlay.fadeIn(500);
+    });
+  //When overlay is clicked hide overlay
+    $overlay.click(function(){
+      $(this).fadeOut(300);
+    });
+  </script>
+  <script type="text/javascript">
+  //Smoothe scrolling effect
+    $(document).ready(function(){
+      smoothScroll();
+    });
+    function smoothScroll() {
+      $('.arrow-btn').click(function() {
+        $('html body').animate({scrollTop:$('#portfolio').offset().top},600);
+      });
+    }
+  </script>
 </body>
 </html>

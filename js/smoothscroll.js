@@ -4,9 +4,7 @@ $(document).ready(function(){
 
 function smoothScroll() {
 	$('.arrow-btn').click(function() {
-		$('html body').animate({
-			scrollTop:$('#portfolio').offset().top
-		},600);
+		$('html body').animate({scrollTop:$('#portfolio').offset().top},600);
 	});
 
 }
