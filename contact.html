@@ -1,54 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Francisco Osegueda</title>
+	<title>Francisco Osegueda | Contact</title>
   <!-- Meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <!-- Fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Inconsolata|Lato" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 
-  <!-- Bootstrap CSS -->
+  <!-- Bootstrap/FontAwesome/CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="CSS/style.css">
   
 </head>
 <body>
-	<!-- Navigation Bar -->
-  <nav class="navbar navbar-toggleable-md fixed-top navbar-inverse">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand pb-0" href="index.html"><h1 id="logo">Francisco Osegueda</h1></a>
-    <div class="container collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About me</a></li>
-        <li class="nav-item active"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-  <!-- /Navigation Bar -->
+  <!-- Navigation Bar -->
+  <header>
+    <div class="container">
+      <nav class="navbar navbar-toggleable-sm navbar-inverse">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
 
+        <a class="navbar-brand" href="index.html">
+          <div class="logo">
+            <img src="Img/responsive-logo.svg" alt="Responsive Design Logo">
+          </div>
+          <div class="logo-name">
+            <h1>Francisco <span class="logo-lastname">Osegueda</span></h1>
+            <h2>Front End Web Developer</h2>
+          </div>
+        </a>
+        <div class="container collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html" data-toggle="tooltip" data-placement="bottom" title="Francisco's Portafolio">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html" data-toggle="tooltip" data-placement="bottom" title="About Francisco">About me</a></li>
+            <li class="nav-item active"><a class="nav-link" href="contact.html" data-toggle="tooltip" data-placement="bottom" title="Contact Francisco">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- Main -->
+  <div class="text-center main-secondary">
+    <div class="container">
+      <h1 class="my-3">Contact</h1>
+    </div>
+  </div>
+  <!-- /Main --> 
   
   <!-- About -->
-  <div class="container my-5 sticky-footer">
-    <h1 class="display-4 text-center my-5 text-muted">Contact</h1>
+  <div class="container py-5 sticky-footer">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
-          <h3>General Information</h3>
-          <p>I'm currently available for new web design work. If you have any questions, please don't hesitate to contact me!</p>
-
-          <p>Twitter and email are the best way to reach me. </p>
+          <p>I'm currently available for new web design work. If you have any questions, please don't hesitate to contact me.</p>
+          <p>You can also download my resume <a href="Img/franciscoosegueda.pdf" download="Francisco Osegueda">here</a>.</p>
         </div>
         <div class="col-md-6">
-          <h3>Contact Details</h3>
+          <h5>Contact Details</h5>
           <ul class="contact-info">
-            <li class="mail"><a href="mailto:frankieosegueda1984@gmail.com">frankieosegueda1984@gmail.com</a></li>
-            <li class="twitter"><a href="https://twitter.com/intent/tweet?screen_name=Osegueda1984">@Osegueda1984</a></li>
+            <li><i class="fa fa-phone"></i><a href="tel:+6504513877">650-451-3877</a></li>
+            <li><i class="fa fa-envelope-o"></i><a href="mailto:frankieosegueda1984@gmail.com">frankieosegueda1984@gmail.com</a></li>
+            <li><i class="fa fa-twitter"></i><a href="https://twitter.com/intent/tweet?screen_name=Osegueda1984" target="_blank">@Osegueda1984</a></li>
+            <li><i class="fa fa-github"></i><a href="https://github.com/franjose84" target="_blank">https://github.com/franjose84</a></li>
+            <li></li>
         </ul>
         </div>
       </div>
@@ -57,14 +76,14 @@
   <!-- /About -->
   
   <footer>
-    <div class="container p-3">
+    <div class="container text-center p-3">
       <div class="row">
         <div class="col-sm-6">
         <p class="m-0">&copy; 2017 Francisco Osegueda</p>
         </div>
         <div class="col-sm-6 icons">
-          <a href="https://twitter.com/Osegueda1984"><img class="social-icon" src="Img/twitter.png" alt="Twitter Logo" class="social-icon"></a>
-          <a href="http://facebook.com/franciscojose.oseguedavelasquez"><img class="social-icon" src="Img/facebook.png" alt="Facebook Logo" class="social-icon"></a>
+          <a href="https://twitter.com/Osegueda1984" target="_blank"><i class="fa fa-twitter"></i></a>
+          <a href="https://github.com/franjose84" target="_blank"><i class="fa fa-github"></i></a>
         </div>  
       </div>
     </div>
