@@ -1,9 +1,7 @@
 /****  -- General --  ****/
 *
 {
-    -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body
@@ -70,14 +68,19 @@ footer .fa-github
 /****  -- Sticky footer --  ****/
 body
 {
+    display: -webkit-box;
     display: flex;
     flex-direction: column;
 
     min-height: 100vh;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
 }
 
 .sticky-footer
 {
+    -webkit-box-flex: 1;
     flex: 1;
 }
 
@@ -100,6 +103,9 @@ body
     width: 40px;
     height: 40px;
 
+    transition: -webkit-transform .4s cubic-bezier(.07,-.35,.39,1.39);
+    transition:         transform .4s cubic-bezier(.07,-.35,.39,1.39);
+    transition:         transform .4s cubic-bezier(.07,-.35,.39,1.39), -webkit-transform .4s cubic-bezier(.07,-.35,.39,1.39);
     vertical-align: middle;
 }
 
@@ -162,6 +168,10 @@ body
 }
 
 /**** -- Portfolio -- ****/
+.card
+{
+    overflow: hidden;
+}
 .card-block
 {
     position: absolute;
@@ -170,6 +180,7 @@ body
     bottom: 0;
     left: 0;
 
+    display: -webkit-box;
     display: flex;
     flex-direction: column;
 
@@ -177,13 +188,18 @@ body
     padding-left: 20px;
 
     cursor: pointer;
-    transition: all .4s;
+    transition: opacity .5s ease-in-out;
 
     background: rgba(0,0,0,.65);
 
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-box-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
     align-items: center;
 }
+
 
 
 #overlay
@@ -345,6 +361,11 @@ body
 
 @media (min-width: 992px)
 {
+    .navbar-brand:hover .logo
+    {
+        -webkit-transform: scale(1.3) rotate(-5deg);
+                transform: scale(1.3) rotate(-5deg);
+    }
     .nav-item
     {
         font-size: 1em;
@@ -356,14 +377,28 @@ body
     }
     .card-block
     {
-    	opacity: 0;
+        opacity: 0;
     }
     .card-block:hover
     {
-    	opacity: 1;
+        opacity: 1;
     }
     p
     {
-    	font-size: 1.1em;
+        font-size: 1.1em;
+    }
+    .card img
+    {
+        transition: -webkit-transform .4s;
+        transition:         transform .4s;
+        transition:         transform .4s, -webkit-transform .4s;
+        -webkit-transform-origin: 0 0;
+                transform-origin: 0 0;
+    }
+
+    .card:hover img
+    {
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1);
     }
 }
