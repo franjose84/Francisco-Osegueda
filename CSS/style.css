@@ -7,8 +7,8 @@
 body
 {
     font-family: 'Lato', sans-serif;
-    font-size: .9em;
-    line-height: 1.5;
+    font-size: 1em;
+    line-height: 1.6;
 
     color: #fff;
     background: url('../Img/bg1.jpg') no-repeat center center;
@@ -80,11 +80,12 @@ body
     -webkit-box-direction: normal;
 }
 
-.sticky-footer
+section
 {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
             flex: 1;
+    background-color: rgba(0,0,0,0.7);
 }
 
 /**** -- Header/Navigation -- ****/
