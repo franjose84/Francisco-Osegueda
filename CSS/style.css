@@ -27,6 +27,10 @@ h1
     font-weight: bold;
 }
 
+section #portfolio {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
 /****  -- Colors --  ****/
 
 header,
@@ -87,6 +91,8 @@ section
             flex: 1;
     background-color: rgba(0,0,0,0.7);
 }
+
+
 
 /**** -- Header/Navigation -- ****/
 
@@ -161,8 +167,8 @@ section
 /**** -- Main -- ****/
 .main-primary
 {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 130px;
+    padding-bottom: 130px;
 }
 
 .main-secondary
@@ -348,8 +354,8 @@ section
     }
     .main-primary
     {
-        padding-top: 80px;
-        padding-bottom: 80px;
+        padding-top: 130px;
+        padding-bottom: 130px;
     }
     .main-p
     {
