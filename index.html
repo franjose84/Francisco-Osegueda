@@ -11,7 +11,7 @@
   <!-- Bootstrap/FontAwesome/CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="CSS/style.css">
+  <link rel="stylesheet" type="text/css" href="CSS/style.min.css">
 </head>
 <body>
 	<!-- Navigation Bar -->
@@ -108,37 +108,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   <script type="text/javascript">
-    var $overlay = $('<div id=overlay></div>');
-    var $image = $('<img>');
-    var $caption = $('<p>Visit my <a href="https://github.com/franjose84" target="_blank">GitHub page</a> to learn more.</p>');
-  //Add image and captions to overlay
-    $overlay.append($image);
-    $overlay.append($caption);
-  //Add overlay
-    $('body').append($overlay);
-  //Capture the click event on a link to an image
-    $('#portfolio a').click(function(event){
-      event.preventDefault();
-      var imageLocation = $(this).attr('href');
-      $image.attr('src', imageLocation);
-      //Show the overlay
-      $overlay.fadeIn(500);
-    });
-  //When overlay is clicked hide overlay
-    $overlay.click(function(){
-      $(this).fadeOut(300);
-    });
+  //Lightbox
+   var $overlay=$("<div id=overlay></div>"),$image=$("<img>"),$caption=$('<p>Visit my <a href="https://github.com/franjose84" target="_blank">GitHub page</a> to learn more.</p>');$overlay.append($image);$overlay.append($caption);$("body").append($overlay);$("#portfolio a").click(function(a){a.preventDefault();a=$(this).attr("href");$image.attr("src",a);$overlay.fadeIn(500)});$overlay.click(function(){$(this).fadeOut(300)});
   </script>
   <script type="text/javascript">
-  //Smoothe scrolling effect
-    $(document).ready(function(){
-      smoothScroll();
-    });
-    function smoothScroll() {
-      $('.arrow-btn').click(function() {
-        $('html body').animate({scrollTop:$('#portfolio').offset().top},600);
-      });
-    }
+  //Smooth scrolling effect
+    $(document).ready(function(){smoothScroll()});function smoothScroll(){$(".arrow-btn").click(function(){$("html body").animate({scrollTop:$("#portfolio").offset().top},600)})};
   </script>
 </body>
 </html>
